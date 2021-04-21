@@ -18,7 +18,7 @@ const NuevaCuenta = () => {
     guardarUsuario({ ...usuario, [e.target.name]: e.target.value });
   };
 
-  // submit
+  // submit & validation
   const handleSubmit = (e) => {
     e.preventDefault();
   };
