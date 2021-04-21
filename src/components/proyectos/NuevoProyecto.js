@@ -4,7 +4,7 @@ import proyectoContext from "../../context/proyectoContext";
 const NuevoProyecto = () => {
   // context
   const proyectosContext = useContext(proyectoContext);
-  const { formulario, mostrarFormulario } = proyectosContext;
+  const { formulario, mostrarFormulario, agregarProyecto } = proyectosContext;
 
   // state
   const [proyecto, guardarProyecto] = useState({
@@ -25,6 +25,10 @@ const NuevoProyecto = () => {
   // submit & validation
   const handleSubmit = (e) => {
     e.preventDefault();
+    agregarProyecto({
+      id: Date.now(),
+      nombre: name,
+    });
   };
 
   // onClick
