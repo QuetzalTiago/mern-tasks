@@ -25,9 +25,12 @@ const NuevoProyecto = () => {
   // submit & validation
   const handleSubmit = (e) => {
     e.preventDefault();
-    agregarProyecto({
-      id: Date.now(),
-      nombre: name,
+    if (name === "") {
+      return;
+    }
+    agregarProyecto(proyecto);
+    guardarProyecto({
+      name: "",
     });
   };
 

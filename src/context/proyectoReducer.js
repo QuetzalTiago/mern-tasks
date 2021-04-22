@@ -16,6 +16,12 @@ export default (state, action) => {
         ...state,
         proyectos: action.payload,
       };
+    case AGREGAR_PROYECTO:
+      return {
+        ...state,
+        proyectos: [...state.proyectos, action.payload],
+        formulario: false,
+      };
     default:
       return state;
   }
