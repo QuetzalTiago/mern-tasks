@@ -11,9 +11,14 @@ const FormTarea = () => {
   //array destructuring
   const [proyectoActual] = proyecto;
 
+  //onsubmit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="formulario">
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className="contenedor-input">
           <input
             type="text"
