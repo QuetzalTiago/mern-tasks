@@ -8,6 +8,7 @@ import {
 } from "../types";
 
 export default (state, action) => {
+  //eslint-disable-next-line
   switch (action.type) {
     case FORMULARIO_PROYECTO:
       return {
